@@ -18,4 +18,9 @@ function handleClick(event) {
   });
 }
 
-// https://github.com/hsnaydd/moveto
+tippy("[data-tippy-content]", {
+  theme: "light",
+  animation: "scale",
+});
+
+// https://atomiks.github.io/tippyjs/

@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MoveTo</title>
+    <title>Tippy</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tippy.js@6/themes/light.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tippy.js@6/animations/scale.css"
+    />
     <style>
       body {
         font-family: Arial, Helvetica, sans-serif;
@@ -23,11 +31,21 @@
       }
       button {
         background-color: rgb(255, 241, 221);
-        padding: 0.5rem;
+        padding: 1rem;
         margin: 0.5rem;
         text-transform: uppercase;
         border: none;
         cursor: pointer;
+      }
+      a {
+        display: inline-block;
+        background-color: rgb(255, 241, 221);
+        padding: 1rem;
+        margin: 0.5rem;
+        text-transform: uppercase;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
       }
       section {
         display: flex;
@@ -38,6 +56,12 @@
       button:hover {
         background-color: navajowhite;
       }
+      a:hover {
+        background-color: navajowhite;
+      }
+      .tippy-box[data-theme~="light"] {
+        color: red;
+      }
     </style>
   </head>
 
@@ -45,8 +69,17 @@
     <header id="top">
       <h1>Hello MoveTo</h1>
       <div class="actions">
-        <button data-target="#features">Our Features</button>
-        <button data-target="#contacts" data-mt-duration="1500">
+        <button
+          data-target="#features"
+          data-tippy-content="Tooltip that works great"
+        >
+          Our Features
+        </button>
+        <button
+          data-target="#contacts"
+          data-mt-duration="1500"
+          data-tippy-content="Another Tooltip"
+        >
           Contacts
         </button>
         <a href="#map">Map</a>
@@ -66,6 +99,8 @@
         <button data-target="#top" data-mt-duration="1500">Go Top</button>
       </div>
     </section>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moveTo/1.8.2/moveTo.min.js"></script>
     <script src="app.js"></script>
   </body>
