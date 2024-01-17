@@ -4,11 +4,69 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lodash</title>
+    <title>MoveTo</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+      header {
+        height: 100vh;
+        background-color: mediumslateblue;
+        vertical-align: middle;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      h1 {
+        color: white;
+      }
+      button {
+        background-color: rgb(255, 241, 221);
+        padding: 0.5rem;
+        margin: 0.5rem;
+        text-transform: uppercase;
+        border: none;
+        cursor: pointer;
+      }
+      section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+      }
+      button:hover {
+        background-color: navajowhite;
+      }
+    </style>
   </head>
 
   <body>
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <header id="top">
+      <h1>Hello MoveTo</h1>
+      <div class="actions">
+        <button data-target="#features">Our Features</button>
+        <button data-target="#contacts" data-mt-duration="1500">
+          Contacts
+        </button>
+        <a href="#map">Map</a>
+      </div>
+    </header>
+    <section id="features">
+      <h2>Features</h2>
+    </section>
+    <section id="contacts" style="background-color: navajowhite">
+      <div>
+        <h2>Contacts</h2>
+      </div>
+    </section>
+    <section id="map">
+      <div>
+        <h2>Map</h2>
+        <button data-target="#top" data-mt-duration="1500">Go Top</button>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moveTo/1.8.2/moveTo.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

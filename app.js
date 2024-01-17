@@ -1,22 +1,19 @@
-// Использование lodash
-// 1) В файле app.js дан массив arr. Создайте на его основе массив с уникальными значениями, отсортированными от меньшего к большему. Значение сохраните в константе sortedArr.
+const moveto = new MoveTo();
 
-// 2) Дан объект userSkills. Создайте на базе него новый объект userApprovedSkills, который будет содержать только ключи оригинального объекта, в которых есть значения, отличные от null и undefined.
+const buttons = document.querySelectorAll("button");
 
-const arr = [10, 1, 21, 1, 33, 3, 33, 5, 8, 8, 1, 3, 5];
+const link = document.querySelector("a");
 
-const userSkills = {
-  css: "b2",
-  html: "c1",
-  js: "a2",
-  ts: null,
-  react: undefined,
-  vue: null,
-  lodash: "a1",
-};
+buttons.forEach((btn) => moveto.registerTrigger(btn));
 
-const sortedArr = _.sortBy(_.uniq(arr));
-console.log(sortedArr); // [1, 3, 5, 8, 10, 21, 33]
+link.addEventListener("click", handleClick);
 
-const userApprovedSkills = _.pickBy(userSkills, _.isString);
-console.log(userApprovedSkills); //{css: 'b2', html: 'c1', js: 'a2', lodash: 'a1'}
+function handleClick(event) {
+  console.log(this);
+  event.preventDefault();
+  const target = document.querySelector(this.getAttribute("href"));
+  console.log(target);
+  moveto.move(target, {
+    duration: 2000,
+  });
+}
