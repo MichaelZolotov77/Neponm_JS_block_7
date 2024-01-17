@@ -23,4 +23,11 @@ tippy("[data-tippy-content]", {
   animation: "scale",
 });
 
-// https://atomiks.github.io/tippyjs/
+OverlayScrollbars(document.querySelectorAll(".overlay"), {
+  // scrollbars: {
+  //   autoHide: "scroll",
+  // },
+  className: "os-host-flexbox",
+});
+
+// https://kingsora.github.io/OverlayScrollbars/v1/#!overview
