@@ -23,11 +23,30 @@ tippy("[data-tippy-content]", {
   animation: "scale",
 });
 
-OverlayScrollbars(document.querySelectorAll(".overlay"), {
-  // scrollbars: {
-  //   autoHide: "scroll",
-  // },
-  className: "os-host-flexbox",
+// OverlayScrollbars(document.querySelectorAll(".overlay"), {
+//   // scrollbars: {
+//   //   autoHide: "scroll",
+//   // },
+//   className: "os-host-flexbox",
+// });
+
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
-// https://kingsora.github.io/OverlayScrollbars/v1/#!overview
+// https://swiperjs.com/
