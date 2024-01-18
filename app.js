@@ -88,4 +88,28 @@ IMask(document.getElementById("date"), {
   },
 });
 
-// https://imask.js.org/guide.html
+const toggleBtn = document.getElementById("toggler");
+const form = document.querySelector("form");
+toggleBtn.addEventListener("click", handleToggle);
+
+function handleToggle() {
+  if (form.style.opacity == 0) {
+    anime({
+      targets: form,
+      opacity: 1,
+      height: form.scrollHeight,
+      duration: 350,
+      easing: "easeInOutQuad",
+    });
+  } else {
+    anime({
+      targets: form,
+      opacity: 0,
+      height: 0,
+      duration: 350,
+      easing: "easeInOutQuad",
+    });
+  }
+}
+
+// animejs.com

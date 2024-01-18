@@ -93,6 +93,15 @@
         background-color: navajowhite;
         border: 1px solid black;
       }
+      form {
+        border: 1px solid black;
+      }
+      form > div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+      }
     </style>
   </head>
 
@@ -142,19 +151,25 @@
     <section id="contacts" style="background-color: navajowhite">
       <div>
         <h2>Contacts</h2>
-        <form autocomplete="off">
-          <label>
-            Phone
-            <input type="text" id="phone" />
-          </label>
-          <label>
-            Age
-            <input type="text" id="age" />
-          </label>
-          <label>
-            Date
-            <input type="text" id="date" />
-          </label>
+        <span id="toggler">Toggle Form</span>
+        <form
+          autocomplete="off"
+          style="opacity: 0; height: 0; overflow: hidden"
+        >
+          <div>
+            <label>
+              Phone
+              <input type="text" id="phone" />
+            </label>
+            <label>
+              Age
+              <input type="text" id="age" />
+            </label>
+            <label>
+              Date
+              <input type="text" id="date" />
+            </label>
+          </div>
         </form>
       </div>
     </section>
@@ -164,6 +179,7 @@
         <button data-target="#top" data-mt-duration="1500">Go Top</button>
       </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
     <script src="https://unpkg.com/imask"></script>
     <script src="https://afarkas.github.io/lazysizes/lazysizes.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
