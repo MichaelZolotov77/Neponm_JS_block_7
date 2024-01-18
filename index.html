@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LazyLoad</title>
+    <title>Forms</title>
     <link
       rel="stylesheet"
       href="https://unpkg.com/tippy.js@6/themes/light.css"
@@ -142,20 +142,20 @@
     <section id="contacts" style="background-color: navajowhite">
       <div>
         <h2>Contacts</h2>
-        <img
-          alt="bird"
-          data-expand="-110"
-          width="100%"
-          height="300px"
-          data-src="https://images.unsplash.com/photo-1470116073782-48ae2ccd8ffd?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1600&amp;q=80"
-          class="lazyload"
-        />
-        <img
-          alt="Mountain"
-          data-expand="-110"
-          data-src="https://images.unsplash.com/photo-1544198365-f5d60b6d8190?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1130&amp;q=80"
-          class="lazyload"
-        />
+        <form autocomplete="off">
+          <label>
+            Phone
+            <input type="text" id="phone" />
+          </label>
+          <label>
+            Age
+            <input type="text" id="age" />
+          </label>
+          <label>
+            Date
+            <input type="text" id="date" />
+          </label>
+        </form>
       </div>
     </section>
     <section id="map">
@@ -164,12 +164,7 @@
         <button data-target="#top" data-mt-duration="1500">Go Top</button>
       </div>
     </section>
-    <!-- <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/js/OverlayScrollbars.min.js"
-      integrity="sha512-B1xv1CqZlvaOobTbSiJWbRO2iM0iii3wQ/LWnXWJJxKfvIRRJa910sVmyZeOrvI854sLDsFCuFHh4urASj+qgw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script> -->
+    <script src="https://unpkg.com/imask"></script>
     <script src="https://afarkas.github.io/lazysizes/lazysizes.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>

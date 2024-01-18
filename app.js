@@ -49,4 +49,43 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// https://github.com/aFarkas/lazysizes
+IMask(document.getElementById("phone"), {
+  mask: "+{7}(000)-000-00-00",
+});
+
+IMask(document.getElementById("age"), {
+  mask: Number,
+  min: 0,
+  max: 108,
+});
+
+IMask(document.getElementById("date"), {
+  mask: Date,
+  lazy: false,
+  autofix: true,
+  blocks: {
+    d: {
+      mask: IMask.MaskedRange,
+      placeholderChar: "d",
+      from: 1,
+      to: 31,
+      maxLength: 2,
+    },
+    m: {
+      mask: IMask.MaskedRange,
+      placeholderChar: "m",
+      from: 1,
+      to: 12,
+      maxLength: 2,
+    },
+    Y: {
+      mask: IMask.MaskedRange,
+      placeholderChar: "y",
+      from: 2000,
+      to: 2100,
+      maxLength: 4,
+    },
+  },
+});
+
+// https://imask.js.org/guide.html
