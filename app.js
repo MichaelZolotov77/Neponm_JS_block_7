@@ -49,4 +49,4 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// https://swiperjs.com/
+// https://github.com/aFarkas/lazysizes
